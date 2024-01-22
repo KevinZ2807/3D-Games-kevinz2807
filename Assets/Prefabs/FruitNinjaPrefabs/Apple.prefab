@@ -11,18 +11,26 @@ PrefabInstance:
     - target: {fileID: 2554982639622828633, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0716d4d317f9e674989eb7cb7385ba3c, type: 2}
+      objectReference: {fileID: 2100000, guid: daf74b76f80429341b43987376e2a7f8, type: 2}
     - target: {fileID: 2712944946859485035, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0716d4d317f9e674989eb7cb7385ba3c, type: 2}
+      objectReference: {fileID: 2100000, guid: daf74b76f80429341b43987376e2a7f8, type: 2}
     - target: {fileID: 2712944946859485035, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4048815bf38b74843b8b2c110630448e, type: 2}
+      objectReference: {fileID: 2100000, guid: 54d2609680e24e54f8eb738b821eeb70, type: 2}
     - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3286173618104028758, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -75,18 +87,18 @@ PrefabInstance:
     - target: {fileID: 5965166382602146385, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0716d4d317f9e674989eb7cb7385ba3c, type: 2}
+      objectReference: {fileID: 2100000, guid: daf74b76f80429341b43987376e2a7f8, type: 2}
     - target: {fileID: 5965166382602146385, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 4048815bf38b74843b8b2c110630448e, type: 2}
+      objectReference: {fileID: 2100000, guid: 54d2609680e24e54f8eb738b821eeb70, type: 2}
     - target: {fileID: 6330532082566076326, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067824017574706523, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Name
-      value: Watermelon
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

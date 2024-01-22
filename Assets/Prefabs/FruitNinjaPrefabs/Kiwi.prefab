@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2554982639622828633, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7306e0a1c5719f74fba68f05da853e6b, type: 2}
+    - target: {fileID: 2712944946859485035, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7306e0a1c5719f74fba68f05da853e6b, type: 2}
+    - target: {fileID: 2712944946859485035, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 256e072dd266d0e40bc1499cc86bd05e, type: 2}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,9 +72,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3007888728105498692, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965166382602146385, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7306e0a1c5719f74fba68f05da853e6b, type: 2}
+    - target: {fileID: 5965166382602146385, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 256e072dd266d0e40bc1499cc86bd05e, type: 2}
     - target: {fileID: 7067824017574706523, guid: 0a261a8eade82d241b171ecb905f491c, type: 3}
       propertyPath: m_Name
-      value: Fruit_Base Variant
+      value: Kiwi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
