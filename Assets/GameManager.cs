@@ -6,10 +6,17 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance; // Singleton
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highScoreText;
     private int score = 0;
+
+    private void Awake() {
+        highScoreText.text = "High score: " + PlayerPrefs.GetInt("HighScore").ToString();
+        Application.targetFrameRate = 60;
+    }
 
     private void Start() {
         instance = this;
+        NewGame();
     }
 
     private void NewGame() {
@@ -22,7 +29,15 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
-    private void UpdateHighScore() {
-        if (score > PlayerPrefs)
+    public void UpdateHighScore() {
+        if (score > PlayerPrefs.GetInt("HighScore", 0)) {
+            PlayerPrefs.SetInt("HighScore", score);
+            highScoreText.text = "High score: " + score.ToString();
+        }
+    }
+
+    public void ResetHighScore() {
+        // PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("HighScore");
     }
 }
