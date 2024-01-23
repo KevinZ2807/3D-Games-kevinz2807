@@ -7,6 +7,7 @@ public class Blade : MonoBehaviour
     [SerializeField] private TrailRenderer bladeTrail;
     private BladeState currentState;
     public Vector3 direction { get; private set;}
+    public float sliceForce = 5f;
     private float minSliceVelocity = 0.01f;
 
     private enum BladeState {
@@ -16,7 +17,7 @@ public class Blade : MonoBehaviour
         Stopping
     }
 
-    void Start() {
+    void Awake() {
         mainCamera = Camera.main;
         bladeCollider = GetComponent<Collider>();
         currentState = BladeState.Idle;
