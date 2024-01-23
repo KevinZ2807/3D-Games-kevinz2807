@@ -19,21 +19,21 @@ public class Blade : MonoBehaviour
 
     void Awake() {
         mainCamera = Camera.main;
-        bladeCollider = GetComponent<Collider>();
+        bladeCollider = GetComponent<SphereCollider>();
         currentState = BladeState.Idle;
         bladeTrail = GetComponentInChildren<TrailRenderer>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         switch (currentState) {
+            case BladeState.Slicing:
+                ContinueSlicing();
+                break;
             case BladeState.Idle:
                 CheckStartSlicing();
                 break;
             case BladeState.Starting:
                 StartSlicing();
-                break;
-            case BladeState.Slicing:
-                ContinueSlicing();
                 break;
             case BladeState.Stopping:
                 StopSlicing();
@@ -58,8 +58,8 @@ public class Blade : MonoBehaviour
         SetNewPosition();
         currentState = BladeState.Slicing;
         bladeCollider.enabled = true;
-        bladeTrail.Clear();
         bladeTrail.enabled = true;
+        bladeTrail.Clear();
     }
 
     private void StopSlicing() {

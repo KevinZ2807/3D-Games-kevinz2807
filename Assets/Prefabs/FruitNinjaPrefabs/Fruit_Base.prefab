@@ -96,6 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc76ce8094b4e04db5e761947e07d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wholeObject: {fileID: 4068407825706881932}
+  slicedObject: {fileID: 3286173618104028758}
+  fruitRb: {fileID: 0}
+  fruitCollider: {fileID: 0}
 --- !u!1001 &2403722287235003143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,6 +284,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3747040762b65e34d8eede1a81c63836, type: 3}
   m_PrefabInstance: {fileID: 2403722287235003143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3286173618104028758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3747040762b65e34d8eede1a81c63836, type: 3}
+  m_PrefabInstance: {fileID: 2403722287235003143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3797812725327900381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,5 +353,10 @@ PrefabInstance:
 --- !u!4 &3692445851149257014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03fd5aa78ef88fe48bf8c0585fa3a554, type: 3}
+  m_PrefabInstance: {fileID: 3797812725327900381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4068407825706881932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 03fd5aa78ef88fe48bf8c0585fa3a554, type: 3}
   m_PrefabInstance: {fileID: 3797812725327900381}
   m_PrefabAsset: {fileID: 0}
