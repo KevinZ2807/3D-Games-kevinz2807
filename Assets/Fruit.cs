@@ -8,13 +8,16 @@ public class Fruit : MonoBehaviour
     [SerializeField] private Collider fruitCollider;
     [SerializeField] private ParticleSystem juiceParticleEffect;
 
+    public int fruitScore = 0;
+
     private void Start() {
         fruitRb = GetComponent<Rigidbody>();
         fruitCollider = GetComponent<Collider>();
-        juiceParticleEffect = GetComponent<ParticleSystem>();
+        juiceParticleEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     private void GetSliced(Vector3 direction, Vector3 position, float force) { // To aplly force to push the fruit
+        GameManager.instance.IncreaseScore(fruitScore);
         wholeObject.SetActive(false);
         slicedObject.SetActive(true);
 
