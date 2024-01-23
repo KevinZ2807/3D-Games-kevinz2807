@@ -4,7 +4,7 @@ public class Blade : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Collider bladeCollider;
-    
+    [SerializeField] private TrailRenderer bladeTrail;
     private BladeState currentState;
     public Vector3 direction { get; private set;}
     private float minSliceVelocity = 0.01f;
@@ -20,6 +20,7 @@ public class Blade : MonoBehaviour
         mainCamera = Camera.main;
         bladeCollider = GetComponent<Collider>();
         currentState = BladeState.Idle;
+        bladeTrail = GetComponentInChildren<TrailRenderer>();
     }
 
     private void Update() {
@@ -56,11 +57,14 @@ public class Blade : MonoBehaviour
         SetNewPosition();
         currentState = BladeState.Slicing;
         bladeCollider.enabled = true;
+        bladeTrail.Clear();
+        bladeTrail.enabled = true;
     }
 
     private void StopSlicing() {
         currentState = BladeState.Idle;
         bladeCollider.enabled = false;
+        bladeTrail.enabled = false;
     }
 
     private void ContinueSlicing() {
