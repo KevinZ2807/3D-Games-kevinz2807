@@ -6,10 +6,12 @@ public class Fruit : MonoBehaviour
     [SerializeField] private GameObject slicedObject;
     [SerializeField] private Rigidbody fruitRb;
     [SerializeField] private Collider fruitCollider;
+    [SerializeField] private ParticleSystem juiceParticleEffect;
 
     private void Start() {
         fruitRb = GetComponent<Rigidbody>();
         fruitCollider = GetComponent<Collider>();
+        juiceParticleEffect = GetComponent<ParticleSystem>();
     }
 
     private void GetSliced(Vector3 direction, Vector3 position, float force) { // To aplly force to push the fruit
@@ -17,6 +19,7 @@ public class Fruit : MonoBehaviour
         slicedObject.SetActive(true);
 
         fruitCollider.enabled = false;
+        juiceParticleEffect.Play();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         slicedObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
