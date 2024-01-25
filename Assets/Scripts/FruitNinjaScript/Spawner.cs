@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
-    [SerializeField] private float bombChance = 0.05f;
+    [SerializeField] private float bombChance = 0.05f; [Range(0f, 1f)]
     [SerializeField] private float minSpawnDelay;
     [SerializeField] private float maxSpawnDelay;
     [SerializeField] private float minAngle = -15f;

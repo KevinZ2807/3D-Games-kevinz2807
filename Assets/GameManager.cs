@@ -7,12 +7,17 @@ public class GameManager : MonoBehaviour
     static public GameManager instance; // Singleton
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
+    [SerializeField] private Blade blade;
+    [SerializeField] private Spawner spawner;
     private int score = 0;
     private float timeCount = 0f;
 
     private void Awake() {
         highScoreText.text = "High score: " + PlayerPrefs.GetInt("HighScore").ToString();
         Application.targetFrameRate = 60;
+
+        blade = FindObjectOfType<Blade>();
+        spawner = FindObjectOfType<Spawner>();
     }
 
     private void Start() {
@@ -47,6 +52,11 @@ public class GameManager : MonoBehaviour
     private void NewGame() {
         score = 0;
         scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void GameOver() {
+        blade.enabled = false;
+        spawner.enabled = false;
     }
 
     public void IncreaseScore(int point) {
