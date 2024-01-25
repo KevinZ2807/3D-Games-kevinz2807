@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
     private Collider spawnArea;
 
     public GameObject[] fruitPrefabs;
+    public GameObject bombPrefab;
+    [SerializeField] private float bombChance = 0.05f;
     [SerializeField] private float minSpawnDelay;
     [SerializeField] private float maxSpawnDelay;
     [SerializeField] private float minAngle = -15f;
@@ -32,6 +34,9 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
 
             GameObject fruitPrefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
+            if (Random.value < bombChance) {
+                fruitPrefab = bombPrefab;
+            }
 
             Vector3 position = new Vector3();
             // Lay vi tri trong dien tich cua (Box) Collider
