@@ -403,14 +403,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3301127489629522537, guid: aaf48e9c450719945920dab6f86a3655, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 6179129134149806698}
-    - target: {fileID: 3301127489629522537, guid: aaf48e9c450719945920dab6f86a3655, type: 3}
-      propertyPath: groundMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 5974694271886434206, guid: aaf48e9c450719945920dab6f86a3655, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18380545
@@ -460,11 +452,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaf48e9c450719945920dab6f86a3655, type: 3}
---- !u!4 &6179129134149806698 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7345721324282048516, guid: aaf48e9c450719945920dab6f86a3655, type: 3}
-  m_PrefabInstance: {fileID: 6179129134149806697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8659424823534033815
 PrefabInstance:
   m_ObjectHideFlags: 0
