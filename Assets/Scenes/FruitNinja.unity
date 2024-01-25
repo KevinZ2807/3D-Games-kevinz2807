@@ -329,6 +329,8 @@ MonoBehaviour:
   - {fileID: 2571900734295599393, guid: 87aa830a3325cd743911a5beb517abf6, type: 3}
   - {fileID: 2571900734295599393, guid: ff3636f1e48171d448f317ec488b2834, type: 3}
   - {fileID: 2571900734295599393, guid: 53743b984c970ea42894cb4b59e7a4ec, type: 3}
+  bombPrefab: {fileID: 3405324722089724479, guid: ff624189c86ae9a45a028500225a0c8d, type: 3}
+  bombChance: 0.05
   minSpawnDelay: 0.5
   maxSpawnDelay: 3
   minAngle: -15
@@ -1180,6 +1182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1639671054}
   highScoreText: {fileID: 40053072}
+  blade: {fileID: 0}
+  spawner: {fileID: 0}
 --- !u!4 &1825655899
 Transform:
   m_ObjectHideFlags: 0

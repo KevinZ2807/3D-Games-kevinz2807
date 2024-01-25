@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -22,10 +23,17 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         instance = this;
+        Cursor.lockState = CursorLockMode.Confined;
         NewGame();
     }
 
     void Update() {
+        PressButtonReset();
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("MainScene");
+        }
+    }
+    private void PressButtonReset() {
         if (Input.GetKeyDown(KeyCode.R)) {
             Debug.Log("R pressed");
             timeCount = 0f; // Reset time count whenever R is pressed
