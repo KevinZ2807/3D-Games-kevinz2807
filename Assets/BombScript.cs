@@ -4,9 +4,6 @@ public class BombScript : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explodeEffect;
     
-    private void Start() {
-        explodeEffect = GetComponent<ParticleSystem>();
-    }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             Explode();
@@ -16,6 +13,6 @@ public class BombScript : MonoBehaviour
     }
 
     private void Explode() {
-        explodeEffect.Play();
+        Instantiate(explodeEffect, transform.position, Quaternion.identity);
     }
 }
