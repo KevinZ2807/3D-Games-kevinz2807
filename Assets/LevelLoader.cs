@@ -1,18 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEditor.SearchService;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    static public LevelLoader instance;
+
+    [SerializeField] private Animator transtition;
+    [SerializeField] private float transitionTime = 1f;
+
+    private void Awake() {
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void LoadNextLevel(string levelName) {
+        StartCoroutine(LoadLevel(levelName));
+    }
+
+    IEnumerator LoadLevel (string levelName) {
+        transtition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelName);
     }
 }

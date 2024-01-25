@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private Blade blade;
     [SerializeField] private Spawner spawner;
+
     private int score = 0;
     private float timeCount = 0f;
 
@@ -30,7 +31,8 @@ public class GameManager : MonoBehaviour
     void Update() {
         PressButtonReset();
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            SceneManager.LoadScene("MainScene");
+            //SceneManager.LoadScene("MainScene");
+            LevelLoader.instance.LoadNextLevel("MainScene");
         }
     }
     private void PressButtonReset() {

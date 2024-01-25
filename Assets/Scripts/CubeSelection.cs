@@ -31,6 +31,7 @@ public class CubeSelection : MonoBehaviour
         if (Vector3.Distance(player.transform.position, gameObject.transform.position) >= minDistance) {
             return;
         }
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
+        LevelLoader.instance.LoadNextLevel(sceneName);
     }
 }
