@@ -8,7 +8,7 @@ public class BombScript : MonoBehaviour
         if (other.CompareTag("Player")) {
             Explode();
             Destroy(gameObject);
-            GameManager.instance.GameOver();
+            FruitNinja.GameManager.instance.GameOver();
         }
     }
 

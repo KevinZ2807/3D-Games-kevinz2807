@@ -17,7 +17,7 @@ public class Fruit : MonoBehaviour
     }
 
     private void GetSliced(Vector3 direction, Vector3 position, float force) { // To aplly force to push the fruit
-        GameManager.instance.IncreaseScore(fruitScore);
+        FruitNinja.GameManager.instance.IncreaseScore(fruitScore);
         wholeObject.SetActive(false);
         slicedObject.SetActive(true);
 
