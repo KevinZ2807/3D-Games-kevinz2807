@@ -2,7 +2,7 @@
 
 For this repository, I mainly push **3D Unity Games** from what I have been studying on Youtube to review what I have learnt from those.
 
-Here is a list of game and what I have learnt from those so far:
+Here is a list of games and what I have learnt:
 
 ## 0. First-person Main Scene
 
@@ -18,4 +18,4 @@ https://youtu.be/b3xgCUlst88?si=vR4IkXJBqR6lpWPm
 
 Moving Ball and Vector reflect, Computer (AI) opponent, 2-Player mode, Starting Animation, namespace for GameManager.
 
-Please **note** that everything above is just what I learnt from videos, **not everything I have acknowledged so far**.
+Please **note** that everything above is just what I learnt from videos and a small part of what I have learnt Unity in general. There are more things I learnt that I don't mention in this repository.
