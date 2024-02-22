@@ -15,6 +15,7 @@ public class BallController : MonoBehaviour
     private float xRandom;
     private float zRandom;
     private float minDirection = 0.5f;
+    private bool isStopping = true;
     
     void Start()
     {
@@ -24,6 +25,9 @@ public class BallController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isStopping) {
+            return;
+        }
         // Using Moving Kinematics
         //transform.position += direction * speed * Time.deltaTime;
         // or
@@ -54,5 +58,14 @@ public class BallController : MonoBehaviour
         xRandom = Random.Range(-1f, 1f);
         zRandom = Random.Range(-1f, 1f);
         direction = new Vector3(xRandom + 0.1f, 0f, zRandom + 0.1f); // + 0.1f to prevent worst case: (0, 0, 0)
+    }
+
+    public void Stop() {
+        isStopping = true;
+    }
+
+    public void Go() {
+        RandomlyLaunchTheBall();
+        isStopping = false;
     }
 }
