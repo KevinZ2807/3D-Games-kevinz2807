@@ -19,9 +19,7 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        xRandom = Random.Range(-1f, 1f);
-        zRandom = Random.Range(-1f, 1f);
-        direction = new Vector3(xRandom, 0f, zRandom);
+        RandomlyLaunchTheBall();
     }
 
     void FixedUpdate()
@@ -30,6 +28,7 @@ public class BallController : MonoBehaviour
         //transform.position += direction * speed * Time.deltaTime;
         // or
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime); // Move the ball
+
     }
 
 
@@ -51,4 +50,9 @@ public class BallController : MonoBehaviour
         
     }
 
+    private void RandomlyLaunchTheBall() {
+        xRandom = Random.Range(-1f, 1f);
+        zRandom = Random.Range(-1f, 1f);
+        direction = new Vector3(xRandom + 0.1f, 0f, zRandom + 0.1f); // + 0.1f to prevent worst case: (0, 0, 0)
+    }
 }

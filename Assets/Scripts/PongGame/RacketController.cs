@@ -8,19 +8,25 @@ public class RacketController : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [Header("Attributes")]
     [SerializeField] private float speed;
-    
-    private float vertical;
+    public KeyCode up;
+    public KeyCode down;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        vertical = Input.GetAxis("Vertical");
+        MovePlayer(up, down);
+    }
 
-        rb.velocity = Vector3.forward * speed * vertical;
+    private void MovePlayer(KeyCode upKey, KeyCode downKey)
+    {
+        var direction = 0f;
+        if (Input.GetKey(upKey)) direction += 1f;
+        if (Input.GetKey(downKey)) direction -= 1f;
+
+        transform.position += Vector3.forward * direction * speed * Time.deltaTime;
     }
 }
