@@ -17,7 +17,7 @@ public class RacketController : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         vertical = Input.GetAxis("Vertical");
 
