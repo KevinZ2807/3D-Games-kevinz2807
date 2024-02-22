@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_LocalRotation.x
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -46,15 +46,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -3858031873170044262, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 754ae4f3b23c7d541acb9fc298c820ed, type: 2}
+      objectReference: {fileID: 2100000, guid: 61aa55aa996b22444a4bf484b2da88d5, type: 2}
     - target: {fileID: 919132149155446097, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
       propertyPath: m_Name
       value: CyberRacket
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dccba926f2de046ffbb1701a88668d67, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
