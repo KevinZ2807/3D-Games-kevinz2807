@@ -4,39 +4,39 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Rigidbody rb;
+    
+    [Header("Attributes")]
+    [SerializeField] private float speed;
+    [SerializeField] private Vector3 direction;
 
-    //public float minDirection = 0.5f;
-
-    private bool stopped;
-
-    // Start is called before the first frame update
+    
+    private float xRandom;
+    private float zRandom;
+    
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        xRandom = Random.Range(-1f, 1f);
+        zRandom = Random.Range(-1f, 1f);
+        direction = new Vector3(xRandom, 0f, zRandom);
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        // Using Moving Kinematics
+        //transform.position += direction * speed * Time.deltaTime;
+        // or
+        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime); // Move the ball
     }
 
-    /* 
-    // CODE SNIPPET FOR RACKET DIRECTION CHANGE
-    Vector3 newDirection = (transform.position - other.transform.position).normalized;
 
-    newDirection.x = Mathf.Sign(newDirection.x) * Mathf.Max(Mathf.Abs(newDirection.x), this.minDirection);
-    newDirection.z = Mathf.Sign(newDirection.z) * Mathf.Max(Mathf.Abs(newDirection.z), this.minDirection);
-
-    direction = newDirection;
-    */
-
-    public void Stop() {
-        stopped = true;
-    }
-
-    public void Go() {
-        stopped = false;
+    private void OnCollisionEnter(Collision other) {
+        var firstContact = other.contacts[0];
+        Debug.Log(other.contacts[0].normal);
+        Vector3 newVelocity = Vector3.Reflect(direction.normalized, firstContact.normal); // Reflect to the wall it hits
+        direction = newVelocity; // Change direction base on the reflection
     }
 
 }
