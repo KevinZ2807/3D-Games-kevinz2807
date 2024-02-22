@@ -233,6 +233,14 @@ PrefabInstance:
       propertyPath: down
       value: 274
       objectReference: {fileID: 0}
+    - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
+      propertyPath: offset
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8384913996610524149, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13
@@ -384,7 +392,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6246544821221579572, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
       propertyPath: speed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6246544821221579572, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
       propertyPath: m_Enabled
@@ -393,6 +401,14 @@ PrefabInstance:
     - target: {fileID: 7365908955473668485, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365908955473668485, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
+      propertyPath: m_TagString
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580335387278227888, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7580335387278227888, guid: e125b1237f956154f899ddd4b08d208b, type: 3}
       propertyPath: m_IsKinematic
@@ -515,6 +531,18 @@ PrefabInstance:
     - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
       propertyPath: down
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
+      propertyPath: offset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600246239983111568, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
+      propertyPath: isPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8384913996610524149, guid: fdd8cceb79811cd4587685e2384a9f97, type: 3}
       propertyPath: m_LocalPosition.x
